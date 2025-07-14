@@ -1,7 +1,7 @@
 <template>
   <h1>LoginView</h1>
   <div>
-    <button v-on:click="login">Login</button>
+    <button class="btn btn-primary" v-on:click="login">Login</button>
   </div>
 </template>
 

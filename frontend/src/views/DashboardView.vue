@@ -2,7 +2,7 @@
   <h1>DashboardView</h1>
   <div>
     Welcome
-    <button v-on:click="logout">Logout</button>
+    <button class="btn btn-error" v-on:click="logout">Logout</button>
   </div>
 </template>
 
