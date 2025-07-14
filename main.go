@@ -1,10 +1,13 @@
 package main
 
 import (
+	"github.com/charmbracelet/log"
 	"main/routes"
 	"main/utils"
 	"net/http"
 )
+
+
 
 func main() {
 	utils.IntializeDB()
@@ -14,10 +17,9 @@ func main() {
 
 	// Catch-all for the SPA: serves from embedded frontend/dist, falling back to index.html
 	mux.Handle("/{path...}", SPAHandler("index.html")) // 'dist' is the embedded FS (defined below or imported)
-
 	// Start the server
-	println("Server listening on http://localhost:1323")
+	log.Info("Server listening on http://localhost:1323")
 	if err := http.ListenAndServe(":1323", mux); err != nil {
-		println("Server failed:", err.Error())
+		log.Info("Server failed:", err.Error())
 	}
 }

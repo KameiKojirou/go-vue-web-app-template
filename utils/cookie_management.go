@@ -11,6 +11,11 @@ func SetCookie(w http.ResponseWriter, name, value string) {
 	http.SetCookie(w, &http.Cookie{
 		Name:    name,
 		Value:   value,
+		Path:    "/",
+		Domain:  "localhost",
+		SameSite: http.SameSiteLaxMode,
+		HttpOnly: false,
+		Secure:  true,
 		Expires: time.Now().Add(24 * time.Hour),
 	})
 }
