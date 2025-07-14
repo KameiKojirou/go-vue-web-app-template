@@ -19,6 +19,7 @@ const logout = async () => {
 
   })
   auth.removeToken()
+  router.push('/login')
 }
 
 if (!auth.getToken()) {
