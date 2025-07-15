@@ -1,12 +1,12 @@
 <template>
-  <h1>DashboardView</h1>
+  <Title>Dashboard</Title>
   <div>
-    Welcome
     <button class="btn btn-error" v-on:click="logout">Logout</button>
   </div>
 </template>
 
 <script lang="ts" setup>
+import Title from '@/components/Title.vue';
 import router from '@/router';
 import { useAuthTokenStore } from '@/stores/authTokenStore';
 
@@ -25,5 +25,4 @@ const logout = async () => {
 if (!auth.getToken()) {
   router.push('/login');
 }
-
 </script>

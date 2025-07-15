@@ -1,5 +1,9 @@
 <template>
   <div>
-    <h1>This is an about page</h1>
+    <Title>About</Title>
   </div>
 </template>
+
+<script setup lang="ts">
+  import Title from '@/components/Title.vue';
+</script>
