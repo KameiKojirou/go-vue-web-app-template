@@ -10,8 +10,8 @@ const auth = useAuthTokenStore();
     <div>
      Token: {{ auth.token }}
       <nav class="flex flex-row gap-2 justify-between bg-base-300 p-4">
-        <RouterLink class="btn btn-ghost" to="/">
-          <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="64" height="64" />
+        <RouterLink class="btn btn-ghost btn-square" to="/">
+          <img alt="Vue logo" class="w-full h-auto" src="@/assets/logo.svg" width="16" height="16" />
         </RouterLink>
         <div class="flex flex-row gap-2 [&>a]:btn [&>a]:btn-ghost items-center">
           <RouterLink to="/">Home</RouterLink>
